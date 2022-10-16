@@ -2,6 +2,8 @@
 }
 
 .disabled {
+    background-color: saddlebrown;
+    color: saddlebrown ;
 }
 
 .secondary {
@@ -11,6 +13,8 @@
 }
 
 .red {
+    background-color: red;
+    color: saddlebrown;
 }
 
 .default:hover {
