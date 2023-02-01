@@ -28,7 +28,7 @@ function Clock() {
     let fullDate = Intl.DateTimeFormat('ru', {
         day: "2-digit",
         month: "2-digit",
-        year: "2-digit"
+        year: "numeric"
     })
 
     const start = () => {
