@@ -43,15 +43,16 @@ const HW13 = () => {
 
             })
             .catch((e) => {
+                debugger
                 switch (e.response.status) {
                     case 500:
-                        setCode(`Ошибка ${e.status}!`)
+                        setCode(`Ошибка ${e.response.status}!`)
                         setText(e.response.data.errorText)
                         setInfo(e.response.data.info)
                         setImage(error500)
                         break;
                     case 400:
-                        setCode(`Ошибка ${e.status}!`)
+                        setCode(`Ошибка ${e.response.status}!`)
                         setText(e.response.data.errorText)
                         setInfo(e.response.data.info)
                         setImage(error400)
