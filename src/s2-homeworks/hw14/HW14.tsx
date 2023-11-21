@@ -35,28 +35,26 @@ const HW14 = () => {
         setLoading(true)
         getTechs(value)
             .then((res) => {
-                res && setTechs(res.data.techs)
                 // делает студент
-                setLoading(false)
                 // сохранить пришедшие данные
-
+                res && setTechs(res.data.techs)
+                setLoading(false)
                 //
             })
     }
 
     const onChangeText = (value: string) => {
-        debugger
-        setFind(value)
         // делает студент
-
         // добавить/заменить значение в квери урла
         // setSearchParams(
+        setFind(value)
         setSearchParams([['find', value]])
+
+
         //
     }
 
     useEffect(() => {
- debugger
         const params = Object.fromEntries(searchParams)
         sendQuery(params.find || '')
         setFind(params.find || '')
@@ -83,7 +81,6 @@ const HW14 = () => {
                 <div id={'hw14-loading'} className={s.loading}>
                     {isLoading ? '...ищем' : <br/>}
                 </div>
-
                 {mappedTechs}
             </div>
         </div>
